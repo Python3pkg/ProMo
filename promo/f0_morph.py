@@ -107,7 +107,7 @@ def f0Morph(fromWavFN, pitchPath, stepList,
                                         0, fromDuration)
         pointObj.save(pitchFNFullPath)
 
-        outputTime, outputVals = zip(*outputDataList)
+        outputTime, outputVals = list(zip(*outputDataList))
         mergedDataList.append((outputTime, outputVals))
         
         praat_scripts.resynthesizePitch(praatEXE, fromWavFN, pitchFNFullPath,
@@ -117,8 +117,8 @@ def f0Morph(fromWavFN, pitchPath, stepList,
     # 4. (Optional) Plot the generated contours
     if doPlotPitchSteps:
 
-        fromTime, fromVals = zip(*fromPitchData)
-        toTime, toVals = zip(*toPitchData)
+        fromTime, fromVals = list(zip(*fromPitchData))
+        toTime, toVals = list(zip(*toPitchData))
 
         plot_morphed_data.plotF0((fromTime, fromVals),
                                  (toTime, toVals),

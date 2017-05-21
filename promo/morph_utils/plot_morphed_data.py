@@ -129,8 +129,8 @@ def plotIntensity(fromDataList, toDataList, mergeTupleList,
     fromDataList = mag2DB(fromDataList)
     toDataList = mag2DB(toDataList)
 
-    print(max(fromDataList))
-    print(max(toDataList))
+    print((max(fromDataList)))
+    print((max(toDataList)))
 
     plt.hold(True)
 
@@ -156,7 +156,7 @@ def plotIntensity(fromDataList, toDataList, mergeTupleList,
 
         valueList = mag2DB(valueList)
 
-        print(max(valueList))
+        print((max(valueList)))
 
         colorValue += colorStep
         hexValue = "#%02x0000" % int(255 - colorValue)
@@ -194,7 +194,7 @@ def plotDuration(fromDurationList, toDurationList, resultDataList,
     colorTuple = ['red', 'yellow', 'blue']
     width = 0.2
     n = len(dataList)
-    iterN = range(n)
+    iterN = list(range(n))
 
     # Pre-plotting work
     plt.hold(True)
@@ -216,7 +216,7 @@ def plotDuration(fromDurationList, toDurationList, resultDataList,
     plt.xticks(iterN2, xLabelList)
 
     # Plot the data
-    transposedList = zip(*dataList)
+    transposedList = list(zip(*dataList))
     bottom = [0 for i in iterN]
     for i, row in enumerate(transposedList):
 

@@ -38,7 +38,7 @@ class IntegrationTests(unittest.TestCase):
 
     def test_modify_pitch_accent(self):
         """Running 'modify_pitch_accent_example.py'"""
-        print("\nmodify_pitch_accent_example.py" + "\n" + "-" * 10)
+        print(("\nmodify_pitch_accent_example.py" + "\n" + "-" * 10))
         try:
             import modify_pitch_accent_example
         except utils.FileNotFound:
@@ -46,7 +46,7 @@ class IntegrationTests(unittest.TestCase):
         
     def test_duration_manipulation(self):
         """Running 'duration_manipulation_example.py'"""
-        print("\nduration_manipulation_example.py" + "\n" + "-" * 10)
+        print(("\nduration_manipulation_example.py" + "\n" + "-" * 10))
         try:
             import duration_manipulation_example
         except utils.FileNotFound:
@@ -54,7 +54,7 @@ class IntegrationTests(unittest.TestCase):
 
     def test_pitch_morph(self):
         """Running 'pitch_morph_example.py'"""
-        print("\npitch_morph_example.py" + "\n" + "-" * 10)
+        print(("\npitch_morph_example.py" + "\n" + "-" * 10))
         try:
             import pitch_morph_example
         except utils.FileNotFound:
@@ -62,7 +62,7 @@ class IntegrationTests(unittest.TestCase):
 
     def test_pitch_morph_to_contour(self):
         """Running 'pitch_morph_to_pitch_contour.py'"""
-        print("\npitch_morph_to_pitch_contour.py" + "\n" + "-" * 10)
+        print(("\npitch_morph_to_pitch_contour.py" + "\n" + "-" * 10))
         try:
             import pitch_morph_to_pitch_contour
         except utils.FileNotFound:

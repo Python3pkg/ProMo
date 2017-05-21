@@ -235,7 +235,7 @@ def morphAveragePitch(fromDataList, toDataList):
     Because other manipulations can alter the average pitch, morphing the pitch
     is the last pitch manipulation that should be done
     '''
-    timeList, fromPitchList = zip(*fromDataList)
+    timeList, fromPitchList = list(zip(*fromDataList))
     toPitchList = [pitchVal for _, pitchVal in toDataList]
     
     fromListNoZeroes = [val for val in fromPitchList if val > 0]

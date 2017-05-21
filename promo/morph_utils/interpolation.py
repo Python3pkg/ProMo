@@ -31,7 +31,7 @@ def quadraticInterpolation(valueList2d, numDegrees, n,
     '''
     _numpyCheck()
     
-    x, y = zip(*valueList2d)
+    x, y = list(zip(*valueList2d))
     
     if startTime is None:
         startTime = x[0]
